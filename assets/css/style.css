@@ -1,37 +1,37 @@
-/* -----------------------------Styles the "Navigation Menu--------------------------- */
 
-/* Containers for the Name and Navigation - upper page */
-.container{
-    box-sizing: content-box;
-    width: 960px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
+/* ------------------------Styles the Navigation bar - upper page---------------------- */
 
-.boxHeader{
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-}
-
-.boxNav{
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-}
-
-.boxNav nav{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
-/* Styles the Your Name h1 header - upper page */
-h1{
-    font-family: georgia, Times, 'Times New Roman', serif;
+/* Styles the Navigation bar - upper page */
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .topnav a {
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
     background-color: #4aaaa5;
     color: #ffffff;
+  }
+
+
+/* Styles the h1 Header in the Navigation bar - upper page */
+h1{
+    font-family: georgia, Times, 'Times New Roman', serif;
+    background-color: #ffffff;
+    color: #4aaaa5;
     text-align: center;
     width: 60%;
     padding: 7px;
@@ -78,23 +78,7 @@ p{
     padding: 25px;
 }
 
-/* Styles the About Me h2 header - lower page */
-.headers{
-    color:#4aaaa5;
-    padding: 25px;
-    font-size: 30px;
-    font-weight: bold;
-}
 
-/* Styles the horizontal line added between the About Me header and the image/paragraph - lower page */
-hr{
-    margin-top: 0.5px;
-    margin-bottom: 15px;
-    margin-left: 25px;
-    margin-right: 25px;
-    border-width: 3px;
-    border-color: #cccccc;
-}
 
 /* Styles the About containers - lower page */
 #container2{
@@ -169,6 +153,7 @@ hr{
 
 /* -----------------------------Styles the "Portfolio" page--------------------------- */
 
+
 /* Styles the Portfolio containers - lower page */
 #container3{
     margin: auto;
@@ -206,6 +191,32 @@ hr{
 
 
 
+/* ------------Styles all h2 Headers and Horizontal lines - lower page---------- */
+
+
+/* Styles h2 Header  - lower page */
+.headers{
+    color:#4aaaa5;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 4s;
+}
+
+/* Styles the horizontal line below h2 headers - lower page */
+hr{
+    margin-top: 0.5px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-width: 3px;
+    border-color: #cccccc;
+}
+
+
+
 /* -----------------------------Styles the "Footer"--------------------------- */
 
 footer{
@@ -237,4 +248,14 @@ footer{
 /* Smart phone layout in landscape. Positon of Header is static. */
 
 @media screen and (max-width: 640px) {
-}
+    .topnav {display: none;}
+  }
+
+
+
+/* --------------------------------Animations------------------------------ */
+@keyframes slide {
+    from {color:#4aaaa5;}
+    to   {color: red;}
+  }
+
